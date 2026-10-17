@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f7fc" />
+    <meta name="description" content="Calculadora web de la Actividad 3 de Desarrollo de Aplicaciones Web, UTM." />
+    <title>Calculadora Web | Actividad 3 - UTM</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!--
+      ACTIVIDAD 3 - DESARROLLO DE CALCULADORA WEB
+      Universidad Técnica de Manabí | Desarrollo de Aplicaciones Web | Paralelo A
+      Integrantes: Juan Geovanny Bailón Reyes, Lisbeth Dayanna Monroy Zamora,
+      Leidy Irene Párraga Reina y Jhonny Oscar Vélez Chávez.
+
+      JUAN GEOVANNY BAILÓN REYES - SECCIÓN PARA EXPLICAR EN EL VIDEO:
+      Organización HTML: encabezado, pantalla y botones de la calculadora.
+    -->
+    <main class="pagina">
+      <header class="encabezado">
+        <div class="insignia">UTM <span>·</span> ACTIVIDAD 03</div>
+        <h1>Calculadora <span>web</span></h1>
+        <p>Operaciones básicas de forma rápida, clara y sencilla.</p>
+      </header>
+
+      <section class="calculadora" aria-label="Calculadora de operaciones básicas">
+        <div class="barra-superior">
+          <span class="punto" aria-hidden="true"></span>
+          <span>Calculadora básica</span>
+          <span class="marca" aria-hidden="true">HTML · CSS · JS</span>
+        </div>
+
+        <!-- Pantalla: muestra la operación anterior y el número actual. -->
+        <div class="pantalla" role="group" aria-label="Pantalla de resultados">
+          <div id="operacion" class="operacion" aria-label="Operación en curso">&nbsp;</div>
+          <output id="resultado" class="resultado" aria-label="Resultado" aria-live="polite">0</output>
+        </div>
+
+        <!-- Cada botón tiene un valor o una acción que interpreta JavaScript. -->
+        <div class="teclado" aria-label="Teclado de la calculadora">
+          <button class="tecla tecla-utilidad" data-action="clear" aria-label="Borrar todo">AC</button>
+          <button class="tecla tecla-utilidad" data-action="sign" aria-label="Cambiar signo">+/−</button>
+          <button class="tecla tecla-utilidad" data-action="percent" aria-label="Porcentaje">%</button>
+          <button class="tecla tecla-operador" data-action="operator" data-value="/" aria-label="Dividir">÷</button>
+
+          <button class="tecla" data-number="7">7</button>
+          <button class="tecla" data-number="8">8</button>
+          <button class="tecla" data-number="9">9</button>
+          <button class="tecla tecla-operador" data-action="operator" data-value="*" aria-label="Multiplicar">×</button>
+
+          <button class="tecla" data-number="4">4</button>
+          <button class="tecla" data-number="5">5</button>
+          <button class="tecla" data-number="6">6</button>
+          <button class="tecla tecla-operador" data-action="operator" data-value="-" aria-label="Restar">−</button>
+
+          <button class="tecla" data-number="1">1</button>
+          <button class="tecla" data-number="2">2</button>
+          <button class="tecla" data-number="3">3</button>
+          <button class="tecla tecla-operador" data-action="operator" data-value="+" aria-label="Sumar">+</button>
+
+          <button class="tecla tecla-utilidad" data-action="backspace" aria-label="Borrar último dígito">⌫</button>
+          <button class="tecla" data-number="0">0</button>
+          <button class="tecla" data-action="decimal" aria-label="Separador decimal">.</button>
+          <button class="tecla tecla-igual" data-action="equals" aria-label="Calcular resultado">=</button>
+        </div>
+
+        <div id="aviso" class="aviso" role="status" aria-live="polite">También puedes utilizar el teclado de tu computadora.</div>
+      </section>
+
+      <footer class="pie">
+        Universidad Técnica de Manabí <span>·</span> Desarrollo de Aplicaciones Web
+      </footer>
+    </main>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
